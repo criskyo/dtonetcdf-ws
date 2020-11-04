@@ -18,9 +18,6 @@ public class Sistema {
     private ArchivoDTO ArchivoDTO;
     private VariableDTO variableDTO;
 
-
-
-
     public ArchivoDTO getArchivoDTO() {
         if (ArchivoDTO == null) {
             ArchivoDTO = new ArchivoDTO();

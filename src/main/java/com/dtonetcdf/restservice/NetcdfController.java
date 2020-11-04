@@ -34,9 +34,7 @@ public class NetcdfController {
 
 	@GetMapping("/getvariables")
 	public List<MyVariableDTO> getListVariables() {
-
 			return sistema.getMyVariable();
-
 	}
 	
 	@GetMapping("/getvariable")
