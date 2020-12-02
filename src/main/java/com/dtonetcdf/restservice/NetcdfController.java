@@ -23,18 +23,18 @@ public class NetcdfController {
 	private Sistema sistema;
 	
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
-	public @ResponseBody String handleFileUpload(@RequestParam(value = "file") MultipartFile file) throws IOException {
+	public @ResponseBody String handleFileUpload(@RequestParam(value = "file") MultipartFile file,
+												 @RequestParam(value = "name") String filename) throws IOException {
 
-		String filename = "outN.1";
-		byte[] bytes = file.getBytes();
-		sistema.abrirarchivo(bytes, filename);
+		sistema.abrirarchivo(file.getBytes(), filename);
 
-		return "file uploaded";
+		return "{ message:file uploaded }";
 }
 
 	@GetMapping("/getvariables")
 	public List<MyVariableDTO> getListVariables() {
-			return sistema.getMyVariable();
+
+		return sistema.getMyVariable();
 	}
 	
 	@GetMapping("/getvariable")

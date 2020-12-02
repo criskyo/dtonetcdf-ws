@@ -1,5 +1,7 @@
 package com.dtonetcdf.persistencia;
 
+import com.dtonetcdf.logica.Sistema;
+
 public class MyVariableDTO {
 	
 	private String name;

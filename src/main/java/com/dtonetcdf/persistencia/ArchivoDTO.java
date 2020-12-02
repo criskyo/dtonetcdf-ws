@@ -1,5 +1,6 @@
 package com.dtonetcdf.persistencia;
 
+import com.dtonetcdf.logica.Sistema;
 import ucar.nc2.NetcdfFile;
 import ucar.nc2.Variable;
 
